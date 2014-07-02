@@ -10,7 +10,7 @@ def improve(H, C, D):
 
     '''
     # D update
-    D = D * C.T.dot(H) / C.T.dot(C).dot(H)
+    D = D.T * C.T.dot(H) / C.T.dot(C).dot(H)
 
     # C update
     C = C * H.dot(D.T) / C.dot(D).dot(D.T)
